@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Module">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="angular.min.js"></script>    
+<script src="script.js"></script>
+</head>
+<body ng-controller="Controller">
+    <input type="text" ng-model="seca_detail.name">
+    <hr>
+    <h1>Changes from View</h1>
+    <table border="1 px">
+<tr>
+    <td>Name</td>
+    <td>{{seca_detail.name}}</td>
+</tr>
+<tr>
+    <td>Age</td>
+    <td>{{seca_detail.age}}</td>
+</tr>
+<tr>
+    <td>Mobile</td>
+    <td>{{seca_detail.mb}}</td>
+</tr>
+<tr>
+    <td>Gender</td>
+    <td>{{seca_detail.gen}}</td>
+</tr>
+<tr>
+    <td>Email</td>
+    <td>{{seca_detail.email}}</td>
+</tr>
+
+    </table>
+    
+</body>
+</html>

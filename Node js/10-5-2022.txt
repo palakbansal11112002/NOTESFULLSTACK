@@ -1,0 +1,6 @@
+Node JS:-
+1. Install Node JS
+2. NPM is automatically installed
+3. Set the path
+4. Install IDE
+5. 

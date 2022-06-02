@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Module</title>
+    <script src="angular.min.js"></script>
+    <script src="module.js"></script>
+</head>
+<body>
+    <div ng-app="myModule" ng-controller="myController">
+UserName: <input type="text" ng-model="un">
+Password: <input type="text" ng-model="pwd">
+UsernameName {{un}}
+Password {{pwd}}
+Admin Credentials:{{getadmincred()}}
+
+</div>
+</body>
+</html>

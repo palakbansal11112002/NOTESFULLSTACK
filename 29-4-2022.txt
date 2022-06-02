@@ -1,0 +1,221 @@
+API:-
+Why we Use API?
+Login with Github
+Login with Google
+Login with Facebook
+- Application Programming Interface
+- Ease to process
+- Get Verified Data
+
+Anjularjs API:-
+On the basis of below points API function used
+1. Conversion of data
+
+
+a. lowercase()
+b. uppercase()
+c. copy()
+Deep Copy
+Shallow Copy
+
+z 10 20 30 40 
+y 10 20 30 40 
+y=z
+ 
+d. isString():-
+- Used to check value passed is string or not.
+- Return Boolean Value
+- If Value is String then returns true else false
+
+e. isDate():-
+- Used to check value passed is of type date or not.
+- Return Boolean Value.
+- If Value is date then returns true else false.
+
+f. isNumber():-
+- Pass all possible values
+Integer
+Float
+String
+Char
+
+g. toJson():-
+With Quotes
+Without Quotes
+
+
+AngularJs Tables:-
+AngularJS Select:-
+DDl  -- 
+Topics:-
+1. Modules:-
+2. Controllers
+3. Scope:-
+a. Isolated Scope
+c1 -  scope 
+c2 - scope
+c3 - scope
+b. Shared Scope:-
+$routescope
+vs 
+$route
+
+c. Inherited Scope:-
+
+d1  c1 -- name=Hello
+  d2 c2 -- class=Sec-A
+     {{name}}
+4. Events:-
+Mouse:-
+ng-click
+ng-dblclick
+ng-mouseover
+ng-mouseleave
+ng-mousemove
+
+Keyboard:-
+ng-keypress
+ng-keyup
+ng-keydown
+
+Cut/Copy/Paste:-
+ng-cut
+ng-copy
+ng-paste
+
+5. Filters:-
+lowercase
+uppercase
+number
+currency
+date
+orderby
+limito
+filter
+json
+
+6. Services:-
+- $location:-
+absUrl()
+port()
+host()
+protocol()
+
+- $timeout
+- $interval
+- $window
+- $route
+
+API
+copy()
+lowercase()
+uppercase()
+toJson()
+isString()
+isNumber()
+isDate()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

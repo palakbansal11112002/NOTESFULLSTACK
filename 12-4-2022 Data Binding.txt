@@ -1,0 +1,40 @@
+Data Binding:-
+Process of fetching data and displaying data.
+DDl1-Categories of Menu - veg/Non Veg  ---- veg
+DDl2- values of veg items
+
+tbcountry
+tbstate
+
+DDl1 -- Country  India
+DDl2 -- UP  
+DDl3 --  Mathura
+
+Types of Binding:-
+1. One Way Binding
+2. Two Way Binding
+
+1. Two Way Binding:-
+....
+myApp.controller("myController",function($scope){
+$scope.name="A";
+});
+
+
+{{name}}
+
+Complex Values:-
+
+
+
+
+
+
+
+
+
+
+
+
+
+

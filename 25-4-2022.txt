@@ -1,0 +1,50 @@
+Services:-
+Types in Angular Js
+1. $location:-
+absUrl()
+host()
+port()
+protocol()
+
+2. $route *
+3. $window
+4. $timeout:-
+
+5. $interval
+6. $http
+
+service.js:-
+var myApp=angular.module("myModule",[]);
+myApp.controller("myController",function($scope,$location,$timeout){
+$scope.machine=$location.host();
+$scope.app_port=$location.port();
+$scope.app_protocol=$location.protocol();
+$scope.app_url=$location.absUrl();
+
+$scope.login="Welcome to Landing Page";
+$timeout(function()
+{
+$scope.login="Session Out Try again !!!";
+},4000);
+
+});
+
+View:-
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services in Angular JS</title>
+    <script src="angular.min.js"></script>
+    <script src="service.js"></script>
+</head>
+<body ng-controller="myController">
+    <!-- {{machine}} -->
+    <!-- {{app_port}} -->
+    <!-- {{app_protocol}} -->
+    <!-- {{app_url}} -->
+    {{login}}
+</body>
+</html>

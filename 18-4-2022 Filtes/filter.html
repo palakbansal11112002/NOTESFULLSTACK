@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filters</title>
+    <script src="angular.min.js"></script>
+    <script src="filter.js"></script>
+</head>
+<body ng-controller="myController"> 
+    <!-- <ol>
+        <li ng-repeat="a in subjects | orderBy:'-'">
+            {{a }}
+        </li>
+    </ol> -->
+    
+    <!-- <ul>
+        <li ng-repeat="a in name">
+            {{subject}}
+        </li>
+    </ul> -->
+<!-- <h1>{{url}}</h1>
+<h1>{{protocol}}</h1>
+<h1>{{host}}</h1>
+<h1>{{port}}</h1> -->
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Pass</th>
+    </tr>
+    <tr ng-repeat="a in credentials | orderBy :'id':'-'">
+        <td>{{a.id}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.pass}}</td>
+    </tr>
+    
+</table>
+</body>
+</html>

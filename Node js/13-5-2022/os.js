@@ -1,0 +1,13 @@
+const os_mod= require("os");
+// console.log(os_mod.arch());
+// console.log(os_mod.cpus());
+// console.log(os_mod.totalmem()/1024/1024/1024);
+// console.log(os_mod.freemem()/1024/1024/1024);
+// console.log(os_mod.version());
+// console.log(os_mod.userInfo());
+// console.log(os_mod.type());
+// console.log(os_mod.tmpdir());
+// console.log(os_mod.homedir());
+// console.log(os_mod.hostname());
+// console.log(os_mod.networkInterfaces());
+// console.log(os_mod.loadavg());

@@ -1,0 +1,7 @@
+Validation:-
+Validate - to check data so that correct data 
+entered in database
+1. On the basis data type
+Name 
+Age 
+2. on the basis of predefined format

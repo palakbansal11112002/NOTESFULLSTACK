@@ -1,0 +1,13 @@
+Services:-
+$route:-
+--------
+register  			register.html Enter the details for registration
+Enter the details for registration
+login			login.html  Enter the credntials
+Enter the credntials
+--------
+Steps:-
+1. Download the angular-route.min.js (angularjs.org)
+2. Apply the dependency - ngRoute
+3. config() --- $routeProvider
+4. ng-view -- directive

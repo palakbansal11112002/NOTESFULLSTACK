@@ -1,0 +1,19 @@
+Modules:
+1. File System
+Task 1:-
+- Create folder with your name
+- Create resume.txt
+- Add :-
+Personal Skills
+Professional Skills
+Hobbies
+
+2. OS Module:-
+Task 2:-
+- Create one js file 
+- Use any 10 functions 
+- Share the js FIle and Out of particular function used.
+
+
+
+ 

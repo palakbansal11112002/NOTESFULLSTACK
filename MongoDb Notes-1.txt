@@ -1,0 +1,568 @@
+Operations on DB:-
+Create DB
+Create Collection
+How to Display Database:-
+1. creating Collection
+2. insert record
+
+CRUD:-
+Insertion:-
+1. insert():-
+Insert Single Record
+Insert Multiple Records
+2. insertOne():-
+Insert Single Record
+3. insertMany():-
+Insert Multiple records
+4.save():-
+Insert Single Record
+Insert Multiple Record
+Not Passing Field Name and Field Value.
+
+24-2-2022
+---------
+save():-
+1. passing PK but not matched
+Record insert
+Message:-
+upserted:1
+
+2. not passing PK then 
+insert operation performed.
+Message:
+Inserted:1
+
+3. passing PK --matched--
+Operation:-Update
+Message:-
+Matched :1
+Upserted:0
+Modified:1
+
+find():-
+> -- db.collectionname.find({Mrate:{$gt:3}})
+>= -- $gte
+< -- $lt
+<= -- $lte
+Query to show record whose movie name 
+is present in given list. ["A","B","c","D"...]
+$in
+
+Query to show record whose movie name 
+not present in given list. ["A","B","c","D"...]
+$nin
+
+Query to show record whose 
+movie name is "A" or Mid >2
+$or 
+
+Query to show record whose 
+movie name is "A" and Mid >=1
+$and
+
+Query to show record whose 
+movie name is "A" and Mid =1
+record not matching
+$nor
+
+Query to show record whose 
+movie name is "A" and Mid >=1
+$and
+
+findOne():-
+comparison
+
+findOneAndUpdate():-
+comparsion
+
+update():-
+$set
+db.cn.update({Mname:"A"}:{$set:{Mrate:5}})
+Query:-
+mid>=2 rating:5
+
+mid:2 mname:"E",mrate:2//Update first record only.
+mid:2 mname:"F",mrate:1
+
+
+
+
+remove():-
+
+
+
+
+25-2-2022
+---------
+Data Modelling:-
+1. how to store data
+2. represent the relation between entities
+3. organising the data
+4. Visualise the relation between different entities
+
+customer
+_id
+cname
+cmb
+
+Address
+country
+state
+city
+locality
+landmark
+
+2 types of documents that represent the relation
+1. Reference Document
+2. Embedded Document
+
+customer:
+{
+_id:1,
+cname:"a",
+cmb:11
+}
+Address:
+{
+_id:2,
+acid:1,
+Country:"A",
+State:"A1",
+City:"A2",
+Locality:"A3",
+Landmark:"A4"
+}
+
+Embedded:-
+customer
+{
+_id:1,
+cname:"B",
+cmb:22,
+address:
+{
+country:"B1",
+State:"B2",
+City:"B3",
+Locality:"B4",
+Landark:"B5"
+}
+}
+
+1. Defination
+2. Why Data Model
+3. Use of Data Model
+4. representing the relation with nosql
+5. Difference Between Sql and Nosql
+6. Size
+7. Creating relation with parents
+8. Creating relation with childrens
+9. Relationship:-
+one to one
+one to many
+many to many
+
+Size:-
+Bson document:16 MB
+Document< 16 MB
+API:-GRIDFS
+
+Creating relation with parents
+		Library
+		Books
+Programming Language 		Database
+python,java,C#			Mongodb,DBMS
+
+db.cn.insertMany
+(
+[
+{_id:"python",parent:"Programming Language"},
+{_id:"java",parent:"Programming Language"},
+{_id:"C#",parent:"Programming Language"}
+]
+)
+db.cn.findOne({_id:"C#"}).parent
+Programming Language
+
+Creating relation with children
+db.cn.insertMany:
+{
+[
+{parent:"Programming Language",
+children:["python","java","c#"]},
+{
+parent:"Database",children:["Mongodb","Dbms"]
+},
+{
+parent:"Books",
+children:["Programming Language","Database"]
+},
+{
+parent:"C#",children:[]
+}
+]
+}
+Relationship
+1. one to one
+c1
+id
+name
+mb
+
+A1
+country
+state
+city
+landmark
+Reference:-
+
+2. one to many
+c1
+id
+name
+mb
+A1:-...
+A2:-...
+
+3. many to many
+c1:- ....
+c2:- ....
+A1:- ....
+A2:- ....
+Task:- create reference document and 
+embedded document for
+one to many
+many to many
+--------
+3-3-2022
+--------
+Create Database:-
+Urname
+Collection:-
+YourFriendname
+Number
+Name
+Salary
+Role
+1. Insert the records with the various methods of inserting.
+insert()
+insertOne()
+insertMany()
+save()
+2. Increment the salary by 5000 of Record 1 use name
+for eg:-
+name:"abc" .... inc ..sal
+3. Increment the salary of all records by 10000
+
+------------------------------------------
+Update Many:
+
+db.CollectionName.updateMany({fieldName}, {$inc:{fieldToBeUpdated})
+
+update({},...)
+multi:true
+
+ 
+4-3-2022
+MongoDB Administration:-
+1. Importing and exporting the data
+2. Creating the backup and restore
+3. Managing the users
+Importing and exporting of data
+Import:-
+1. Download the utility
+2. Unzip
+3. Paste that utility in mongodb 
+installed directory.
+4. Download sample dataset.
+5. open cmd and fire mongod and mongo
+6. Syntax:-
+..>mongoimport --db databasename 
+--collection collectionname
+--file filepath
+
+II Export
+1. Download the utility
+2. Unzip
+3. Paste that utility in mongodb 
+installed directory.
+4. open cmd and fire mongod and mongo
+5. syntax:-
+>mongoexport --db dbname --collection colname
+--out filepath+filename
+ 
+7-3-2022
+Mongod Administration
+1. Import & Export
+2. Backup & restore
+3. Managing Users
+3.1 Creating User
+3.2 Enabling Authorization
+3.3 Enabling Authentication
+mongodb Compass
+Creating User:-
+1. Choose Database
+2. syntax:-
+>db.createUser({user:"..",pwd:"..",
+roles:[{role:"..",db:".."}]})
+roles:-
+read
+readwrite
+dbOwner
+root:-.....
+...
+2. Enabling Authorization
+2.1 open config file
+2.2 uncomment security
+2.3 Type authorization: enabled
+-changes will be made by administration
+-restart the mongodb service
+
+3. 
+>mongos --authenticationDatabase "dbname"
+-u ".." -p ".."
+8-3-2022
+Backup & Restore
+mongodump
+Steps:-
+1. Download Utility
+2. Copy and paste in installed mongodb directory
+3. mongodump
+Create Backup of entire database
+default:-dump folder is used to store the backup
+userdefine
+
+
+
+ 
+10-3-2022
+No
+Name
+Salary 
+Role
+1. Find all records starting with name A.
+/^character/
+2. Find all records ending with name A.
+/character$/
+3. Find all records whose name starts 
+with name A 
+and ends with name B.
+$and,/^character/,/character$/
+4. Find all records whose salary is completly
+divisble by 3 and greater than 15000.
+5. Find all records whose 
+salary is not 10000 and salary not 15000.
+4.
+db.Adi.find({$and:[{Salary:{$mod:[3,0]}},
+{Salary:{$gt:15000}}]})
+
+6. Find all records having No is prime.
+ 
+
+31-3-2022
+---------
+Angular JS:-
+why?
+SPA:-
+- Two Way Binding
+MVC
+M-Model -Data Logic
+V-view -display the output
+C-controller request handling
+
+Want to fetch sec a students
+
+Binding:-
+Dropdownlist:-
+
+var..=select * from country
+ddl.ds= ...
+ddl.db()
+
+
+- If any changes made in model that 
+will be reflected in views
+- If any changes made in view that
+ will be reflected in model.
+
+2. Dependency Injection:-
+c language
+scanf()
+stdio.h
+Error:-
+Prototype
+injector:-
+
+3. Testing
+4. Bootstrap mechanism.
+angular.bootstrap(...)//
+Angular JS
+1. Framework to create Single page application.
+2. SPA:- Single form in which user send
+request to server and get back the result in 
+same form/page.
+3. Create Web Application.
+
+Development Environment:-
+1. Install Nodejs(nodejs.org) 
+2. npm(node package manager) is automatically installed.
+3. type the commands in cmd to verify
+>node -v
+>node --version
+>npm -v
+>npm --version
+4. Set the envornment path
+...AppData\Roaming\npm
+5.Install angular CLI(command line interface).
+npm install -g @angular/cli
+
+Execution of Angular Application:-
+1. Load the Static DOM
+2. Load the Angular framework.
+3. {{..}}
+window.write(...)
+Framework will look for the directive
+ng-app
+If it finds the directive then gives 
+you the result.
+If directive not present then
+prints as it is.
+4. Bootstrap mechnaism
+5. static dom converted into dynamic.
+
+Expressions:-
+- {{..}}-Expression
+- operand + operator
+- {{10+20}}
+- {{20-10}}
+- {{name:'sec-a',
+age:2022,course:'Btech-FS'}.name}
+- {{['item1','item2','item3'][2]}}
+- {{1==1}}-true
+- {{1==0}}-false
+- ddl - items - fruits
+Apple
+Orange
+Grapes
+i can use expression
+- ddl - items - colors
+red
+green
+black
+blue
+yellow
+
+Text Control - back color -based on 
+item selection.
+Any control other than textbox 
+- change color 
+
+
+1-4-2022
+--------
+Module:-
+Testimonial
+User Module
+Collection:-
+Directives
+Controllers
+Services
+filters
+configurtion
+bindings
+..
+
+app.module
+
+1. Featured Module
+2. Shared Module
+
+How to create Module:-
+1. Load Static Dom
+2. Load framework
+3. Give Directive
+ng-app=""
+give module name to directive:- ng-app="myModule"
+4. Create Module
+Two Ways:-
+1. Create Seperate js file
+2. Use script tag in same file
+Synatx:-
+var b=angular.module("modulename",[dependeny..]);
+
+Create controller :-
+b.controller("Controllername",function($scope){
+...........
+...........
+});
+
+use directive to instruct the framework for controller is being used in element like div
+
+ng-controller="controller name"
+
+
+
+
+
+ng-init=
+
+ng-repeat=
+list[1,2,3..]
+
+for a in container:
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

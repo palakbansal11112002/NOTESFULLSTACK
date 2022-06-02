@@ -1,0 +1,50 @@
+Filters:-
+- Filters are used to display data in formatted way.
+- Formatted :-
+1. On the Basis of Appearence
+2. On the Basis of constraints :- concept of filters
+- Filters are used in the expression after the variable name.
+- Pipe Symbol is used for applying the filter
+For example:-
+.....
+....
+$scope.name="seca";
+
+
+view:-
+{{name | filtername}} --- Syntax
+- Filters can be used with simple values or array.
+Types of Filters:-
+1. lowercase:-
+For example:- 
+name="SecA"
+seca
+
+2. uppercase
+For example:- 
+name="SecA"
+SECA
+
+3. number:-
+- For easy readability.
+course_fees=80000;
+- 80,000
+- 80,000.000000(Manually)
+
+4. currency:-
+- $80,000
+- $80,000.00(Automatically)
+- Default symbol is Dollar $.
+
+5. limitto:- array
+6. orderby:- 
+7. date:-
+8. filter
+....
+
+
+
+
+
+
+

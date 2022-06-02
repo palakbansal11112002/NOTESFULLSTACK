@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mod2">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.min.js" ></script> 
+   <script src="orderby.js"></script>
+</head>
+<body ng-controller="cont">
+    <select name="" id="" ng-model="a">
+        <option value="">
+            Nikhil
+        </option>
+        <option value="">
+            B
+        </option>
+        <option value="">
+            Vaibhav
+        </option>
+    </select>
+  
+    <input type="text" ng-model="c">
+    <table>
+        <tr>
+            <th>
+                Movie name
+                
+            </th>
+            <th> Rating</th>
+            <th>
+                Price
+            </th>
+        </tr>
+        <tr ng-repeat="b in movies | limitTo: c">
+            <td>
+               {{b.name}}
+        
+            </td>
+            <td>
+                {{b.rating}}
+         
+             </td>
+             <td>
+                {{b.price}}
+         
+             </td>
+        </tr>
+    </table>
+   
+</body>
+</html>

@@ -1,0 +1,23 @@
+Node JS
+2009:-
+C++ embed v8 == Node  
+
+1995:-
+
+Engine:-
+V8     - chrome
+
+SpiderMonkey
+
+Requirements:-
+1. Install Node js
+2. Set the Path. 
+3. Check Version of Node js
+with command prompt
+4. IDE --- VSC
+Check Version of Node js
+with ide
+5. 
+
+
+

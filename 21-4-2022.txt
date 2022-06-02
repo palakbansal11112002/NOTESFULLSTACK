@@ -1,0 +1,11 @@
+Filters:-
+Orderby:-
+- Used to display the data in ascending or 
+descending order.
+- Can be used with:-
+Simple values
+List Values
+Array Object
+- can be used in expression evaluator and in directive
+
+

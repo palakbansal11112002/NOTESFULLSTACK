@@ -1,0 +1,15 @@
+Task - 1
+OrderBy:-
+1. TextBox
+2. DropDownlist
+List Items:-
+Friends=['a','b'];
+List of Documents
+Movies=[
+{moviename:'a',rating:4,ticketprice:...},
+]
+
+Task - 2
+filter
+
+

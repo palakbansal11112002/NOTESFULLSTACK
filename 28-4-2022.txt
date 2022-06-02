@@ -1,0 +1,17 @@
+Services:-
+$window:-
+-Container that wraps the browser window objects
+- Used to display popu messages to user 
+with the help of methods.
+- alert()
+
+
+
+
+
+
+
+
+
+
+
